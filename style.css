@@ -1,0 +1,82 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
+                url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072');
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0; width: 100%;
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    text-align: right;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-content {
+    max-width: 700px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+}
+
+/* Services */
+.services-section { padding: 100px 20px; text-align: center; }
+.services-container { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-top: 30px; }
+
+.service-box {
+    width: 200px; height: 350px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    transition: 0.5s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-box.active { width: 450px; }
+
+.overlay {
+    background: rgba(0,0,0,0.7);
+    height: 100%; width: 100%;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    padding: 20px;
+}
+
+.details { display: none; margin-top: 15px; }
+.service-box.active .details { display: block; }
+
+/* Contact Section */
+.contact-section { padding: 80px 20px; text-align: center; background: rgba(0,0,0,0.9); }
+.contact-card { display: inline-block; text-align: left; background: rgba(255,255,255,0.05); padding: 30px; border-radius: 10px; }
